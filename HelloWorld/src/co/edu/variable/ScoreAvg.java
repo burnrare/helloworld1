@@ -19,6 +19,7 @@ public class ScoreAvg {
 
 		System.out.printf("입력하신 점수는 %2d, %2d, %2d이고, 합계는 %3d, 평균은 %.2f입니다.", s1, s2, s3, sum, avg);
 		
+		
 		int max = s1;
 		
 		if(s2 > max) {
