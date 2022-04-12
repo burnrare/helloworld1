@@ -4,15 +4,6 @@ import java.util.Scanner;
 
 public class OperatorExample {
 	public static void main(String[] args) {
-		int result = 6 / 4;
-		int result2 = 6 % 4;
-		int val = 5;
-		
-		if(val % 2 == 0) {
-			System.out.println("짝수입니다.");
-		} else {
-			System.out.println("홀수입니다.");
-		}
 		
 		// 75300 원.
 		// 5만 원 => ? 개, 1만 원 => ? 개, 5천 원 => ? 개
