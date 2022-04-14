@@ -18,11 +18,13 @@ public class StudentExample2 {
 			students[i].studName = scn.next();
 			students[i].score = Integer.parseInt(scn.next());
 			students[i].age = Integer.parseInt(scn.next());
+		
+			if(students[i].studName.equals(students[i].studName)) {
+				System.out.println(students[i].studName + ", " + students[i].score + ", " + students[i].age);
+			}
+		
 		}
 		
-		if(students[i].studName.equals(students[i].studName)) {
-			System.out.println(students[i].studName + ", " + students[i].score + ", " + students[i].age);
-		}
 		
 		// 조회하고 싶은 이름을 입력
 		// 해당되는 이름을 가지고 와서 홍길동은 ~ 나이는 20살이고 점수는 80점입니다
