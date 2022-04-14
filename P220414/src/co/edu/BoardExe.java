@@ -10,9 +10,11 @@ public class BoardExe {
 		boardList.init(3);
 
 		while (true) {
-			System.out.println("\n----------------------------------------------------------------------------");
-			System.out.println("1. 게시글 작성 | 2. 게시글 수정 | 3. 게시글 목록 | 4. 게시글 삭제 | 5. 게시글 조회 | 9. 종료");
-			System.out.println("------------------------------------------------------------------------------\n");
+			System.out.println(
+					"\n------------------------------------------------------------------------------------------");
+			System.out.println("1. 게시글 작성 | 2. 게시글 수정 | 3. 게시글 목록 | 4. 게시글 삭제 | 5. 게시글 조회 | 6. 작성자 조회 | 9. 종료");
+			System.out.println(
+					"------------------------------------------------------------------------------------------\n");
 
 			Scanner scn = new Scanner(System.in);
 			System.out.println("선택 >> ");
@@ -80,6 +82,17 @@ public class BoardExe {
 					System.out.println("조회 결과가 없습니다.");
 				} else {
 					getBoard.getDetail();
+				}
+
+			} else if (menu == 6) {
+				System.out.println("작성자를 입력해 주세요.");
+				String bWriter = scn.nextLine();
+
+				Board[] multiBoard = boardList.multiSearch(bWriter);		
+				for (Board board : multiBoard) {
+					if (board.getWriter().equals(bWriter)) {
+						board.getInfo();
+					}
 				}
 
 			} else if (menu == 9) {

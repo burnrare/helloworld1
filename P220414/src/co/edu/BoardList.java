@@ -14,7 +14,7 @@ public class BoardList {
 //		boolean check = false;
 		int errorCase = -1; // 저장 공간 없음
 		for (int i = 0; i < boards.length; i++) {
-			if(boards[i] != null && boards[i].getBoardNo() == board.getBoardNo()) {
+			if (boards[i] != null && boards[i].getBoardNo() == board.getBoardNo()) {
 				errorCase = 1; // 동일한 값이 있을 경우의 에러
 				break;
 			}
@@ -22,7 +22,7 @@ public class BoardList {
 				boards[i] = board;
 				errorCase = 0;
 				break;
-			} 
+			}
 		}
 		return errorCase;
 	}
@@ -44,7 +44,7 @@ public class BoardList {
 	public boolean delete(int bNo) {
 		boolean check = false;
 		for (int i = 0; i < boards.length; i++) {
-			if(boards[i].getBoardNo() == bNo) {
+			if (boards[i].getBoardNo() == bNo) {
 				boards[i] = null;
 				check = true;
 				break;
@@ -52,10 +52,10 @@ public class BoardList {
 		}
 		return check;
 	}
-	
+
 	public Board search(int bNo) {
 		for (int i = 0; i < boards.length; i++) {
-			if(boards[i].getBoardNo() == bNo) {
+			if (boards[i].getBoardNo() == bNo) {
 				int currentCnt = boards[i].getSearchCnt();
 				boards[i].setSearchCnt(currentCnt + 1);
 				return boards[i];
@@ -63,7 +63,13 @@ public class BoardList {
 		}
 		return null;
 	}
-	
+
+	public Board[] multiSearch(String bWriter) {
+		for (int i = 0; i < boards.length; i++) {
+				return boards;
+		}
+		return null;
+	}
 
 	// 게시글 목록
 	public Board[] boardList() {
