@@ -65,10 +65,20 @@ public class BoardList {
 	}
 
 	public Board[] multiSearch(String bWriter) {
-		for (int i = 0; i < boards.length; i++) {
-				return boards;
+
+		Board[] sBoards = new Board[5];
+
+		for (int i = 0; i < boards.length; i++) { // 찾을 대상 배열
+			if (boards[i] != null && boards[i].getWriter().equals(bWriter)) {
+				for (int j = 0; j < boards.length; j++) { // 이름 조회
+					if (sBoards[j] == null) {
+						sBoards[j] = boards[i];
+						break;
+					}
+				}
+			}
 		}
-		return null;
+		return sBoards;
 	}
 
 	// 게시글 목록
