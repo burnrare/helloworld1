@@ -3,7 +3,7 @@ package co.edu.loop;
 import java.util.Scanner;
 
 public class WhileExample3 {
-	public static void main(String[] args) {
+	public static void main(String[] args) {                                                                                   
 		// Math.random()의 생성 범위 1 ~ 10까지
 		// 사용자 입력값을 담은 변수 rVal
 		// while 구문으로 입력값과 Math 값이 같도록 // 크다 ~ 작다
